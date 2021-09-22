@@ -22,7 +22,13 @@ class DemandsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'part_id' => $this->faker->numberBetween(1,2),
+            'address' => $this->faker->address(),
+            'state_id' => $this->faker->numberBetween(1,26),
+            'user_id' => $this->faker->numberBetween(1,2),
+            'status_id' => $this->faker->numberBetween(1,2),
+            'created_at'=> $this->faker->date(),
+            'updated_at'=> $this->faker->date(),
         ];
     }
 }

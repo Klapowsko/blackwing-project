@@ -14,6 +14,7 @@ class PartsFactory extends Factory
      */
     protected $model = Parts::class;
 
+
     /**
      * Define the model's default state.
      *
@@ -22,7 +23,13 @@ class PartsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->linuxProcessor(),
+            'description' => $this->faker->text(),
+            'weight'=> $this->faker->randomFloat(2,1,100),
+            'height'=> $this->faker->randomFloat(2,1,100),
+            'width'=> $this->faker->randomFloat(2,1,100),
+            'created_at'=> $this->faker->date(),
+            'updated_at'=> $this->faker->date(),
         ];
     }
 }
