@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\DemandsFactory;
 use Illuminate\Database\Seeder;
 
 class DemandsSeeder extends Seeder
@@ -13,6 +14,8 @@ class DemandsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DemandsFactory::factory()
+            ->count(10)
+            ->create();
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\PartsFactory;
 use Illuminate\Database\Seeder;
 
 class PartsSeeder extends Seeder
@@ -13,6 +14,8 @@ class PartsSeeder extends Seeder
      */
     public function run()
     {
-        //
+        PartsFactory::factory()
+            ->count(10)
+            ->create();
     }
 }
