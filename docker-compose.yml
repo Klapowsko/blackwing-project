@@ -6,10 +6,10 @@ services:
         volumes:
             - '.:/application'
         environment:
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=db_blackwing
-            - MYSQL_USER=user
-            - MYSQL_PASSWORD=password
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
         ports:
             - '8001:3306'
 
